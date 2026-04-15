@@ -1,0 +1,118 @@
+.sidebar {
+  position: fixed;
+  top: 52px; left: 0; bottom: 0;
+  width: 200px;
+  background: var(--surface-low);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  overflow-y: auto;
+  z-index: 50;
+}
+
+.user {
+  padding: 0 16px 20px;
+}
+
+.userName {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--on-surface);
+}
+
+.userLevel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--on-surface-variant);
+  margin-top: 3px;
+}
+
+.nav {
+  flex: 1;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  color: var(--on-surface-variant);
+  font-size: 13px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  border-left: 2px solid transparent;
+  transition: all 0.15s;
+}
+
+.item.clickable {
+  cursor: pointer;
+}
+
+.item.clickable:hover {
+  color: var(--on-surface);
+  background: rgba(195, 245, 255, 0.04);
+}
+
+.item.active {
+  color: var(--primary);
+  background: rgba(195, 245, 255, 0.06);
+  border-left-color: var(--primary-container);
+}
+
+.icon {
+  font-size: 14px;
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.label {
+  font-family: var(--font-sans);
+}
+
+.bottom {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.upgradeBtn {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-container));
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #00363d;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.upgradeBtn:hover {
+  opacity: 0.88;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer a {
+  font-size: 12px;
+  color: var(--on-surface-variant);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.footer a:hover {
+  color: var(--on-surface);
+}

@@ -1,0 +1,270 @@
+.page {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1100px;
+}
+
+/* ── Welcome hero ── */
+.welcome {
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 300px; height: 100%;
+  background: linear-gradient(135deg, transparent, rgba(0, 229, 255, 0.03));
+  pointer-events: none;
+}
+
+.sessionLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--secondary);
+  font-family: var(--font-display);
+  margin-bottom: 12px;
+}
+
+.welcomeTitle {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--on-surface);
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+}
+
+.welcomeDesc {
+  font-size: 13px;
+  color: var(--on-surface-variant);
+  max-width: 440px;
+  line-height: 1.65;
+  margin-bottom: 26px;
+}
+
+.xpRow {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.xpValue {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--on-surface);
+  margin-top: 4px;
+}
+
+.xpUnit {
+  font-size: 13px;
+  color: var(--on-surface-variant);
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+/* ── Two-col grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 20px;
+}
+
+/* ── Matrix ── */
+.matrixHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.matrixCounter {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--on-surface-variant);
+}
+
+.matrixGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.matrixCell {
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  transition: all 0.2s;
+}
+
+.cellDone {
+  background: rgba(62, 236, 111, 0.1);
+  color: var(--secondary);
+}
+
+.cellActive {
+  background: rgba(0, 229, 255, 0.1);
+  color: var(--primary-container);
+  border: 1px solid rgba(0, 229, 255, 0.25);
+}
+
+.cellLocked {
+  background: var(--surface-high);
+  color: var(--on-surface-variant);
+  opacity: 0.5;
+}
+
+.cellNum {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cellStatus {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: var(--font-display);
+}
+
+.efficiencyBar {
+  background: var(--surface-high);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.efficiencyVal {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ── Right col ── */
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.statsCard {
+  padding: 20px;
+}
+
+.statRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-top: 1px solid rgba(195, 245, 255, 0.04);
+}
+
+.statKey {
+  font-size: 12px;
+  color: var(--on-surface-variant);
+}
+
+.statVal {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.milestoneCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.milestoneIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 197, 138, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.milestoneVal {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--on-surface);
+  margin-top: 3px;
+}
+
+/* ── Tracks ── */
+.tracksCard {
+  /* inherits Card */
+}
+
+.tracksHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.editBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--on-surface-variant);
+  font-family: var(--font-display);
+  transition: color 0.15s;
+}
+
+.editBtn:hover {
+  color: var(--primary);
+}
+
+.chips {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.trackChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  background: var(--surface-high);
+  border-radius: 20px;
+  font-size: 12px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* shared */
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--on-surface);
+}

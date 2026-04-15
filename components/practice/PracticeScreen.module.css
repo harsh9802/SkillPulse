@@ -1,0 +1,89 @@
+.page {
+  min-height: calc(100vh - 52px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Progress bar ── */
+.progressBar {
+  display: flex;
+  gap: 3px;
+  padding: 10px 28px 0;
+}
+
+.segment {
+  flex: 1;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--surface-high);
+  transition: background 0.3s;
+}
+
+.segDone {
+  background: var(--secondary);
+}
+
+.segActive {
+  background: var(--primary-container);
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--on-surface-variant);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.15s;
+  font-family: var(--font-sans);
+}
+
+.backBtn:hover {
+  color: var(--on-surface);
+}
+
+.qCounter {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--on-surface-variant);
+}
+
+/* ── Content ── */
+.content {
+  flex: 1;
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4px 28px 40px;
+}
+
+/* ── Loading state ── */
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+  gap: 16px;
+}
+
+.loadingText {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--on-surface-variant);
+  text-transform: uppercase;
+}

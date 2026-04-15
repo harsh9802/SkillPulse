@@ -1,0 +1,48 @@
+.wrapper {
+  position: relative;
+  background: var(--bg);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(59, 73, 76, 0.4);
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.langTag {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--on-surface-variant);
+}
+
+.pre {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--on-surface);
+  white-space: pre;
+}
+
+.line {
+  display: flex;
+  gap: 16px;
+}
+
+.lineNum {
+  color: var(--outline-variant);
+  min-width: 20px;
+  text-align: right;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.lineCode {
+  flex: 1;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
