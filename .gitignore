@@ -2,3 +2,5 @@
 .env.local
 prisma/dev.db
 prisma/dev.db-journal
+project-plan.txt
+node_modules/
